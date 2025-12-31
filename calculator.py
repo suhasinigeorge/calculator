@@ -26,9 +26,9 @@ class Calculator:
                  ('0',4,0),('.',4,1),('=',4,2),('+',4,3),]
         for text,row,col in buttons:
             if text=='=':
-                btn=tk.Button(frame,text=text,width=6,height=2,bg="red",command=self.calculator) #cammand calls the another function
+                btn=tk.Button(frame,text=text,width=6,height=2,bg="green",command=self.calculator) #cammand calls the another function
             else:
-                btn=tk.Button(frame,text=text,width=6,height=2,bg="skyblue",command=lambda t=text:self.press(t))
+                btn=tk.Button(frame,text=text,width=6,height=2,bg="yellow",command=lambda t=text:self.press(t))
             btn.grid(row=row,column=col)
         tk.Button(frame,text="C",width=26,height=2,bg="yellow",command=self.clear).grid(row=5,column=0,columnspan=4)
     def press(self,value):
@@ -50,4 +50,5 @@ class Calculator:
 
 root=tk.Tk()
 Calculator(root)
+
 root.mainloop()
